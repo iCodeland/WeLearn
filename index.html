@@ -8,12 +8,17 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Freelancer - Start Bootstrap Theme</title>
+    <title>WeLearn - 微專業</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- bootstrap-select plugin -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
     <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="http://www.justinaguilar.com/animations/css/animations.css">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
@@ -42,7 +47,7 @@
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">我想要學</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#signup">會員註冊</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#signup">成為一員</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
                 <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">關於團隊</a>
@@ -61,7 +66,8 @@
         <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
         <h1 class="text-uppercase mb-0">We Learn - 微專業</h1>
         <hr class="star-light">
-        <h2 class="font-weight-light mb-0">XXXXXXXXXXXX</h2>
+        <h2 class="font-weight-light mb-0">給渴望多才多藝的你</h2>
+        <h2 class="font-weight-light mb-0">Exchange x Skills</h2>
       </div>
     </header>
 
@@ -78,7 +84,7 @@
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
+              <img class="img-fluid" src="img/portfolio/athletic.icon.svg" alt="">
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
@@ -88,7 +94,7 @@
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/cake.png" alt="">
+              <img class="img-fluid" src="img/portfolio/programming.icon.svg" alt="">
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
@@ -98,7 +104,7 @@
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/circus.png" alt="">
+              <img class="img-fluid" src="img/portfolio/math.icon.svg" alt="">
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
@@ -108,7 +114,7 @@
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/game.png" alt="">
+              <img class="img-fluid" src="img/portfolio/crafts.icon.svg" alt="">
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
@@ -118,7 +124,7 @@
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/safe.png" alt="">
+              <img class="img-fluid" src="img/portfolio/language.svg" alt="">
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
@@ -128,7 +134,7 @@
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/submarine.png" alt="">
+              <img class="img-fluid" src="img/portfolio/music.icon.svg" alt="">
             </a>
           </div>
         </div>
@@ -138,12 +144,10 @@
     <!-- Account Signup Section -->
     <section id="signup">
       <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">會員註冊</h2>
+        <h2 class="text-center text-uppercase text-secondary mb-0">成為一員</h2>
         <hr class="star-dark mb-5">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-            <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
             <form name="sentMessage" id="contactForm" novalidate="novalidate">
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
@@ -161,22 +165,28 @@
               </div>
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label>Phone Number</label>
-                  <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number.">
+                  <label>Password</label>
+                  <input class="form-control" id="passwd" type="password" placeholder="Password" required="required" data-validation-required-message="Please enter a password."></input>
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label>Message</label>
-                  <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
+              <!-- <div class="control-group">
+                <div class="mb-0 pb-2">
+                  <label style="font-size: 0.85em;">School</label>
+                  <select class="selectpicker form-control" id="school" multiple data-max-options="1" data-live-search="true" required="required" title="Please enter your school name" data-validation-required-message="Please select your school.">
+                    <option style="display:none" value="">請選擇您的學校</option>
+                    <option>明道</option>
+                    <option>亞洲</option>
+                    <option>修平</option>
+                  </select>
                   <p class="help-block text-danger"></p>
                 </div>
-              </div>
+              </div> -->
+              
               <br>
               <div id="success"></div>
               <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
+                <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">註冊</button>
               </div>
             </form>
           </div>

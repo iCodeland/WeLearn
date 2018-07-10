@@ -387,3 +387,10 @@ a:focus, a:hover, a:active {
   background-color: #1a252f;
   border-color: #1a252f;
 }
+
+.w-100 {
+  width: 250px!important;
+}
+.portfolio-item{
+  width: 250px!important;
+}
