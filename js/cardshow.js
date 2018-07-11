@@ -12,7 +12,7 @@ $(document).ready(function () {
     var modal = '';
 
     $.each(data, function(index, value){
-      html += '<div class="card">' +
+      html += '<div class="card bigEntrance">' +
             '<img class="card-img-top" src="'+value.img+'" alt="Card image cap">' +
               '<div class="card-body">';
       html +=   '<h4 class="card-title">'+value.title+'</h4>';
