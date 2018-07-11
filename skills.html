@@ -2,9 +2,14 @@
 <html lang="en">
 
 <head>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <script>
+    function getURLParameter(name) {
+      return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+    } 
+  </script>
   <style>
     .layout-margin-8 {
       margin: 3% 8%;
@@ -50,19 +55,19 @@
   <title>WeLearn - 微專業</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
-  <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
   <!-- Plugin CSS -->
-  <link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
 
   <!-- Custom styles for this template -->
-  <link href="../css/freelancer.min.css" rel="stylesheet">
-  <link href="../css/animations.css" rel="stylesheet">
+  <link href="css/freelancer.min.css" rel="stylesheet">
+  <link href="css/animations.css" rel="stylesheet">
 
 </head>
 
@@ -71,7 +76,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">WeLearn - 外語版</a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top" id="headtitle">WeLearn</a>
       <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse"
         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
@@ -80,10 +85,10 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../teach.html">我想要教</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="teach.html">我想要教</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../index.html">回首頁</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html">回首頁</a>
           </li>
         </ul>
       </div>
@@ -125,6 +130,8 @@
     </div>
   </div>
 
+  <div class="modal_group"></div>
+
   <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
   <div class="scroll-to-top d-lg-none position-fixed ">
     <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
@@ -132,96 +139,58 @@
     </a>
   </div>
 
-  <div class="modal_group"></div>
-
   <!-- Bootstrap core JavaScript -->
-  <script src="../vendor/jquery/jquery.min.js"></script>
-  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Plugin JavaScript -->
-  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="../js/freelancer.min.js"></script>
-  <script src="../js/cardshow.js"></script>
+  <script src="js/freelancer.min.js"></script>
+  <script src="js/cardshow.js"></script>
 
   <script type="text/javascript">
-    var data = [
-      {
-        "id": "0",
-        "title": "旅遊不在當啞巴",
-        "context": "教一些我出國常會用到的對話",
-        "school": "鳳山高中",
-        "time": "2018-02-15 建立",
-        "img": "../img/cate/lang/8.png",
-        "people": "3",
-      },
-      {
-        "id": "1",
-        "title": "國中英語",
-        "context": "我國中英文學的還不錯",
-        "school": "北ㄧ女中",
-        "time": "2018-04-24 建立",
-        "img": "../img/cate/lang/6.png",
-        "people": "2",
-      },
-      {
-        "id": "2",
-        "title": "國中英語",
-        "context": "英語這東西，我天生頭腦好～",
-        "school": "武陵高中",
-        "time": "2018-02-14 建立",
-        "img": "../img/cate/lang/7.png",
-        "people": "1",
-      },
-      {
-        "id": "3",
-        "title": "日語N2",
-        "context": "考過囉，我可以告訴你一些考試技巧",
-        "school": "文藻外語大學",
-        "time": "2018-03-15 建立",
-        "img": "../img/cate/lang/5.png",
-        "people": "3",
-      },
-      {
-        "id": "4",
-        "title": "分享德國有趣的事 (*ﾟ∀ﾟ*)",
-        "context": "哈囉！！我在德國留學過一年",
-        "school": "文藻外語大學",
-        "time": "2018-01-23 建立",
-        "img": "../img/cate/lang/4.png",
-        "people": "4",
-      },
-      {
-        "id": "5",
-        "title": "新全民英檢-中高級",
-        "context": "剛考完，趁我還有記憶，速速你考試方向～",
-        "school": "武陵高中",
-        "time": "2018-03-06 建立",
-        "img": "../img/cate/lang/3.png",
-        "people": "2",
-      },
-      {
-        "id": "6",
-        "title": "英語面試",
-        "context": "別緊張，讓我教你",
-        "school": "台中女中",
-        "time": "2018-02-07 建立",
-        "img": "../img/cate/lang/2.png",
-        "people": "1",
-      },
-      {
-        "id": "7",
-        "title": "阿拉伯語",
-        "context": "我也不知道有沒有人想學，總之我會一些",
-        "school": "政治大學",
-        "time": "2018-02-04 建立",
-        "img": "../img/cate/lang/1.png",
-        "people": "0",
-      },
+    var data = [];
+    var cate = getURLParameter('cate');
 
-    ];
+    $.getJSON("https://spreadsheets.google.com/feeds/list/1W1MvN-arK7aoURGC1ONJ0_AlTrdsOZhOKCbL426TauU/1/public/values?alt=json-in-script&callback=?", function (json) {
+      var e = json.feed.entry,
+        l = e.length,
+        entry, i, id, title, context, school, time, img, people, category;
+      for (i = 0; i < l; i++) {
+        entry = e[i];
+        category = entry.gsx$category.$t;
+        if (category == cate || cate == null || cate == 'all') {
+          data.push({
+            "id": entry.gsx$category.$t,
+            "title": entry.gsx$title.$t,
+            "context": entry.gsx$context.$t,
+            "school": entry.gsx$school.$t,
+            "time": entry.gsx$time.$t,
+            "img": entry.gsx$img.$t,
+            "people": entry.gsx$people.$t,
+          });
+        }
+      }
+      if (cate == null || cate == 'all'){
+        $("#headtitle").html('WeLearn - 全版');
+      }else{
+        var cov_list = {
+          "sport"   : "運動",
+          "program" : "程式",
+          "math"    : "理工",
+          "crafts"  : "手做",
+          "language": "外語",
+          "music"   : "音樂",
+        }
+        $("#headtitle").html('WeLearn - '+cov_list[cate]+'版');
+      }
+
+    drawCard();
+    });
+
   </script>
 </body>
 

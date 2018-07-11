@@ -7,7 +7,7 @@ $(function(){ // this will be called when the DOM is ready
     });
 });
 
-$(document).ready(function () {
+function drawCard () {
     var html = '';
     var modal = '';
 
@@ -51,7 +51,7 @@ $(document).ready(function () {
      $('.card-columns').html(html);
      $('.modal_group').html(modal);
 
-});
+};
 function btnAlert_Click(){
   alert("報名成功");
 }
