@@ -44,7 +44,7 @@
     </nav>
 
 	<!-- Account Signup Section -->
-    <section id="signup">
+    <section class="portfolio" id="signup">
       <div class="container">
         <h2 class="text-center text-uppercase text-secondary mb-0">LOGIN</h2>
         <hr class="star-dark mb-5">
@@ -57,14 +57,12 @@
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                   <label>Email Address</label>
                   <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address.">
-                  
                 </div>
               </div>
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                   <label>Password</label>
-                  <input class="form-control" id="password" type="password" placeholder="Password" required="required" data-validation-required-message="Please enter your phone number.">
-                  
+                  <input class="form-control" id="password" type="password" placeholder="Password" required="required" data-validation-required-message="Please enter your password.">
                 </div>
               </div>
               <br>
@@ -74,8 +72,8 @@
                 	</div>
                 	<div class="col-5">
               			<div class="form-group">
-                			<button type="reset" class="btn btn-primary btn-xl" id="CancelButton">Cancel</button>
-                			<button class="btn btn-primary btn-xl" id="sendMessageButton">Login</button>
+                			<!-- <button type="reset" class="btn btn-primary btn-xl" id="CancelButton">Cancel</button> -->
+                			<button class="btn btn-primary btn-xl" id="sendMessageButton">登入</button>
               			</div>
               		</div>
               		<div class="col-3">
@@ -86,8 +84,12 @@
         </div>
       </div>
     </section>
-    <footer class="footer text-center" id="foot">
-    </footer>
+
+    <div class="copyright py-4 text-center text-white">
+      <div class="container">
+        <small>Copyright &copy; CS黑客松團隊 2018</small>
+      </div>
+    </div>
 
     <!--script-->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -104,4 +106,4 @@
     <!-- Custom scripts for this template -->
     <script src="js/freelancer.min.js"></script>
 </body>
-</html>>
+</html>
