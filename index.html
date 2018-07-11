@@ -5,9 +5,6 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
   <title>WeLearn - 微專業</title>
 
   <!-- Bootstrap core CSS -->
@@ -15,7 +12,6 @@
 
   <!-- bootstrap-select plugin -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
 
   <!-- Custom fonts for this template -->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -173,19 +169,13 @@
                 <p class="help-block text-danger"></p>
               </div>
             </div>
-            <!-- <div class="control-group">
-                <div class="mb-0 pb-2">
-                  <label style="font-size: 0.85em;">School</label>
-                  <select class="selectpicker form-control" id="school" multiple data-max-options="1" data-live-search="true" required="required" title="Please enter your school name" data-validation-required-message="Please select your school.">
-                    <option style="display:none" value="">請選擇您的學校</option>
-                    <option>明道</option>
-                    <option>亞洲</option>
-                    <option>修平</option>
-                  </select>
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div> -->
-
+            <div class="form-group">
+              <label>School</label>
+              <select class="form-control form-control-lg" id="school_list">
+                <option>明道中學</option>
+              </select>
+              <p class="help-block text-danger"></p>
+            </div>
             <br>
             <div id="success"></div>
             <div class="form-group">
@@ -432,6 +422,7 @@
   <!-- Contact Form JavaScript -->
   <script src="js/jqBootstrapValidation.js"></script>
   <script src="js/contact_me.js"></script>
+  <script src="js/showshcool.js"></script>
 
   <!-- Custom scripts for this template -->
   <script src="js/freelancer.min.js"></script>

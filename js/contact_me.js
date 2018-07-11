@@ -13,6 +13,7 @@ $(function () {
       var name = $("input#name").val();
       var email = $("input#email").val();
       var pwd = $("input#passwd").val();
+      var school = $("#school_list").val();
 
       if (name == '') {
         status = false;
@@ -40,7 +41,7 @@ $(function () {
           'name': name,
           'email': email,
           'pwd': sha224(pwd),
-          'school': 'NOTSET',
+          'school': school,
           'time': filltime,
         }
 
