@@ -32,7 +32,7 @@ $("#loginBtn").click(function () {
               .append("<strong>登入成功. </strong>");
             $('#success > .alert-success')
               .append('</div>');
-            location.href = "index.html"
+            window.location.replace = "index.html"
         } else {
             // Fail message
             $('#success').html("<div class='alert alert-danger'>");
