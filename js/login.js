@@ -18,7 +18,7 @@ $("#loginBtn").click(function () {
         // if (l != 0) {
         if (email == "aa@aa.aa" && pwd == "123") {
             // var entry = e[0]
-            name = "AAA"
+            name = "AAA";
             localStorage.setItem("name", name);
 
             // localStorage.setItem("name", entry.gsx$name.$t);
