@@ -333,7 +333,7 @@ form .row:first-child .floating-label-form-group {
   padding-bottom: 5rem;
   color: #fff;
   position: relative;
-  background: url("https://cn.best-wallpaper.net/wallpaper/1920x1200/1703/Library-many-books_1920x1200.jpg");
+  background: url(../img/team_bg.jpg);
   background-size: cover;
 }
 footer:before { /* Overlay */
