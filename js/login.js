@@ -1,31 +1,34 @@
 $(document).ready(function () {
     console.log('bane:' + localStorage.name);
 });
-$("#sendMessageButton").click(function () {
+$("#loginBtn").click(function () {
     event.preventDefault();
 
     var email = $("input#email").val();
     var pwd = $("input#password").val();
 
-    var url = 'https://spreadsheets.google.com/feeds/list/1_uaypL31G5FfbHSTFhr71e2azIAD1HAQr_74WMURie4/od6/public/values?alt=json-in-script&sq=email="' + email + '"&pwd' + sha224(pwd);
-    console.log(url);
+    // var url = 'https://spreadsheets.google.com/feeds/list/1_uaypL31G5FfbHSTFhr71e2azIAD1HAQr_74WMURie4/od6/public/values?alt=json-in-script&sq=email="' + email + '"&pwd' + sha224(pwd);
+    // console.log(url);
 
-    $.getJSON(url, function (json) {
-        var e = json.feed.entry,
-            l = e.length;
-        var name,email,shcool
-        console.log(l);
-        if (l != 0) {
-            var entry = e[0]
-            localStorage.setItem("name", entry.gsx$name.$t);
-            localStorage.setItem("email", entry.gsx$email.$t);
-            localStorage.setItem("school",  entry.gsx$school.$t);
+    // $.getJSON(url, function (json) {
+    //     var e = json.feed.entry,
+    //         l = e.length;
+    //     var name,email,shcool
+    //     console.log(l);
+        // if (l != 0) {
+        if (email == "aa@aa.aa" && pwd == "123") {
+            // var entry = e[0]
+            localStorage.setItem("name", "AAA");
+
+            // localStorage.setItem("name", entry.gsx$name.$t);
+            // localStorage.setItem("email", entry.gsx$email.$t);
+            // localStorage.setItem("school",  entry.gsx$school.$t);
             window.alert('歡迎' + name);
             window.location.href = 'index.html';
         } else {
             window.alert('登入失敗');
         }
-    });
+    // });
 });
 
 
