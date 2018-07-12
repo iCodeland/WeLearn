@@ -24,7 +24,7 @@ $("#loginBtn").click(function () {
             // localStorage.setItem("name", entry.gsx$name.$t);
             // localStorage.setItem("email", entry.gsx$email.$t);
             // localStorage.setItem("school",  entry.gsx$school.$t);
-            window.alert('歡迎' + name);
+            // window.alert('歡迎' + name);
             $('#success').html("<div class='alert alert-success'>");
             $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
               .append("</button>");
