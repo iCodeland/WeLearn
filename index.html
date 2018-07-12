@@ -426,7 +426,25 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/freelancer.min.js"></script>
-
+  <script>
+    $(document).ready(function () {
+      if (localStorage.name != null) {
+        $("#loginbar").removeAttr("href");
+        $("#loginbar").html(localStorage.name + ' 登出')
+        $("#loginbar").attr('onClick', 'logoutFuc(this);');
+      } else {
+        $("#loginbar").attr("href", "login");
+      }
+    });
+    function logoutFuc() {
+      if (localStorage.name != null) {
+        localStorage.removeItem('name');
+        $("#loginbar").html('登入')
+        $("#loginbar").removeAttr('onclick');
+        window.location.href = "index.html";
+      }
+    }
+  </script>
 </body>
 
 </html>

@@ -174,21 +174,21 @@
           });
         }
       }
-      if (cate == null || cate == 'all'){
+      if (cate == null || cate == 'all') {
         $("#headtitle").html('WeLearn - 全版');
-      }else{
+      } else {
         var cov_list = {
-          "sport"   : "運動",
-          "program" : "程式",
-          "math"    : "理工",
-          "crafts"  : "手做",
+          "sport": "運動",
+          "program": "程式",
+          "math": "理工",
+          "crafts": "手做",
           "language": "外語",
-          "music"   : "音樂",
+          "music": "音樂",
         }
-        $("#headtitle").html('WeLearn - '+cov_list[cate]+'版');
+        $("#headtitle").html('WeLearn - ' + cov_list[cate] + '版');
       }
 
-    drawCard();
+      drawCard();
     });
 
   </script>

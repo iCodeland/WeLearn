@@ -26,7 +26,12 @@ $("#loginBtn").click(function () {
             window.alert('歡迎' + name);
             window.location.href = 'index.html';
         } else {
-            window.alert('登入失敗');
+            // Fail message
+            $('#success').html("<div class='alert alert-danger'>");
+            $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+              .append("</button>");
+            $('#success > .alert-danger').append($("<strong>").text("登入失敗"));
+            $('#success > .alert-danger').append('</div>');
         }
     // });
 });
